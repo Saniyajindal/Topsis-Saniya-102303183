@@ -11,27 +11,29 @@ TOPSIS is based on the concept that the chosen alternative should have the short
 ### Step-by-Step Implementation:
 
 1. **Normalization**  
-   The decision matrix is normalized to scale all criteria to a common range.
+   The decision matrix is normalized to scale all criteria to a common range (0 to 1).  
+   The formula used is vector normalization:  
+
+   rᵢⱼ = xᵢⱼ / √(∑ xᵢⱼ²)
 
 2. **Weighting**  
-   The normalized matrix is multiplied by the weights provided for each criterion.
+   The normalized matrix is multiplied by the weights provided for each criterion:  
+
+   vᵢⱼ = rᵢⱼ × wⱼ
 
 3. **Ideal Best & Ideal Worst**  
-   Ideal best and ideal worst values are identified based on impacts (+ or -).
 
-4. **Distance Calculation**  
-   Euclidean distance from ideal best and ideal worst is calculated.
+   - Beneficial Criteria (+): Max value is best  
+   - Non-Beneficial Criteria (-): Min value is best  
 
-5. **TOPSIS Score**  
-   Final score is calculated and alternatives are ranked.
+4. **Euclidean Distance**  
 
----
+   Sᵢ⁺ = √(∑ (vᵢⱼ − Vⱼ⁺)²)  
+   Sᵢ⁻ = √(∑ (vᵢⱼ − Vⱼ⁻)²)
 
-## 📊 Result Visualization
+5. **Performance Score**  
 
-The following graph shows the TOPSIS score comparison of all alternatives:
-
-![TOPSIS Score Comparison](image.png)
+   Pᵢ = Sᵢ⁻ / (Sᵢ⁺ + Sᵢ⁻)
 
 ---
 
