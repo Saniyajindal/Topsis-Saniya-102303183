@@ -2,6 +2,8 @@
 
 `Topsis-Saniya-102303183` is a Python library for solving **Multiple Criteria Decision Making (MCDM)** problems using the **Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS)**.
 
+---
+
 ## Methodology
 
 TOPSIS is based on the concept that the chosen alternative should have the shortest geometric distance from the positive ideal solution (best possible value) and the longest geometric distance from the negative ideal solution (worst possible value).
@@ -22,6 +24,14 @@ TOPSIS is based on the concept that the chosen alternative should have the short
 
 5. **TOPSIS Score**  
    Final score is calculated and alternatives are ranked.
+
+---
+
+## 📊 Result Visualization
+
+The following graph shows the TOPSIS score comparison of all alternatives:
+
+![TOPSIS Score Comparison](image.png)
 
 ---
 
