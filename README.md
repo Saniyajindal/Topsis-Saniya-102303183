@@ -8,32 +8,24 @@
 
 TOPSIS is based on the concept that the chosen alternative should have the shortest geometric distance from the positive ideal solution (best possible value) and the longest geometric distance from the negative ideal solution (worst possible value).
 
-### Step-by-Step Implementation:
+### Step-by-Step Implementation
 
 1. **Normalization**  
    The decision matrix is normalized to scale all criteria to a common range (0 to 1).  
-   The formula used is vector normalization:  
-
-   rᵢⱼ = xᵢⱼ / √(∑ xᵢⱼ²)
+   Vector normalization is used.
 
 2. **Weighting**  
-   The normalized matrix is multiplied by the weights provided for each criterion:  
-
-   vᵢⱼ = rᵢⱼ × wⱼ
+   The normalized matrix is multiplied by the weights provided for each criterion.
 
 3. **Ideal Best & Ideal Worst**  
-
-   - Beneficial Criteria (+): Max value is best  
-   - Non-Beneficial Criteria (-): Min value is best  
+   - Beneficial criteria (+): Higher value is better  
+   - Non-beneficial criteria (-): Lower value is better  
 
 4. **Euclidean Distance**  
+   Distance from ideal best and ideal worst is calculated.
 
-   Sᵢ⁺ = √(∑ (vᵢⱼ − Vⱼ⁺)²)  
-   Sᵢ⁻ = √(∑ (vᵢⱼ − Vⱼ⁻)²)
-
-5. **Performance Score**  
-
-   Pᵢ = Sᵢ⁻ / (Sᵢ⁺ + Sᵢ⁻)
+5. **TOPSIS Score**  
+   Final score is computed and alternatives are ranked.
 
 ---
 
